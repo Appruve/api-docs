@@ -5,7 +5,48 @@ info:
   description: Appruve Identity API
 servers:
   - url: 'https://api.appruve.co'
-paths: {}
+paths:
+  /v1/verifications/ng/bvn:
+    post:
+      summary: Verify Nigeria BVN
+      tags: []
+      responses: {}
+      operationId: post-v1-verifications-ng-bvn
+      description: Verify A Nigerian Bank Verification Number
+      security:
+        - Authorization: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: This represents the BVN number
+                  example: '22161412900'
+                first_name:
+                  type: string
+                  description: This represents the first name of the BVN holder
+                  example: David
+                last_name:
+                  type: string
+                  description: This represents the last name of the BVN holder
+                  example: Ife
+                middle_name:
+                  type: string
+                  description: This represents the middle name of the BVN holder
+                  example: Anuyah
+                date_of_birth:
+                  type: string
+                  description: This represents the date of birth of the BVN holder in the format yyyy-MM-dd.
+                  example: '1996-02-21'
+                phone_number:
+                  type: string
+                  description: This represents the phone number of the BVN holder
+                  example: '+234000000000'
+              required:
+                - id
 components:
   schemas: {}
   securitySchemes:
