@@ -14,7 +14,7 @@ paths:
       operationId: post-v1-verifications-ng-bvn
       description: Verify A Nigerian Bank Verification Number
       security:
-        - Authorization: []
+        - Access Token: []
       requestBody:
         content:
           application/json:
@@ -50,7 +50,6 @@ paths:
 components:
   schemas: {}
   securitySchemes:
-    Authorization:
-      name: Access Token
-      type: apiKey
-      in: header
+    Access Token:
+      type: http
+      scheme: bearer
