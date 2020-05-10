@@ -1,6 +1,0 @@
-title: PhoneNumber
-type: object
-properties:
-  phone_number:
-    type: string
-    description: Phone number of the document holder

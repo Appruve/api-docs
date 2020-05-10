@@ -1,6 +1,0 @@
-title: GenderMatch
-type: object
-properties:
-  is_gender_match:
-    type: boolean
-    description: Whether the gender from the request matches the gender of the matched record

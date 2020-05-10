@@ -1,6 +1,0 @@
-title: AddressMatch
-type: object
-properties:
-  is_address_match:
-    type: boolean
-    description: Whether the address from the request matches the address of the matched record

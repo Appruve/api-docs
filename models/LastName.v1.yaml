@@ -1,6 +1,0 @@
-title: LastName
-type: object
-properties:
-  last_name:
-    type: string
-    description: Last name of the document holder
