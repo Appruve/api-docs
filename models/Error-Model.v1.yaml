@@ -1,0 +1,14 @@
+title: Error Model
+type: object
+properties:
+  code:
+    type: integer
+    format: int64
+  message:
+    type: string
+  details:
+    type: array
+    items:
+      type: object
+required:
+  - code

@@ -1,0 +1,15 @@
+openapi: 3.0.0
+info:
+  title: Appruve Identity
+  version: '1.0'
+  description: Appruve Identity API
+servers:
+  - url: 'https://api.appruve.co'
+paths: {}
+components:
+  schemas: {}
+  securitySchemes:
+    Authorization:
+      name: Access Token
+      type: apiKey
+      in: header
