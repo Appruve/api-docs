@@ -1,0 +1,6 @@
+title: Address
+type: object
+properties:
+  address:
+    type: string
+    description: Address of the document holder

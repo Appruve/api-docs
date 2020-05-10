@@ -1,0 +1,6 @@
+title: FirstName
+type: object
+properties:
+  first_name:
+    type: string
+    description: First name of the document holder

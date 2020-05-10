@@ -1,0 +1,18 @@
+title: Error Model
+type: object
+properties:
+  code:
+    type: integer
+    format: int64
+    description: Error code
+  message:
+    type: string
+    description: Error message
+  details:
+    type: object
+    description: Error details object
+    properties:
+      '':
+        type: object
+required:
+  - code

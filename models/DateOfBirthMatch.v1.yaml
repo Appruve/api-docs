@@ -1,0 +1,6 @@
+title: DateOfBirthMatch
+type: object
+properties:
+  is_date_of_birth_match:
+    type: boolean
+    description: Whether the date of birth from the request matches the date of birth of the matched record

@@ -9,8 +9,41 @@ paths:
   /v1/verifications/ng/bvn:
     post:
       summary: Verify Nigeria BVN
-      tags: []
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  first_name:
+                    type: string
+                    description: First name of the document holder
+                  middle_name:
+                    type: string
+                    description: Middle name of the document holder
+                  last_name:
+                    type: string
+                    description: Last name of the document holder
+                  date_of_birth:
+                    type: string
+                    description: Date of birth of the document holder
+                  phone_number:
+                    type: string
+                    description: Phone number of the document holder
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: ../models/ErrorModel.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/ErrorModel.v1.yaml
       operationId: post-v1-verifications-ng-bvn
       description: Verify A Nigerian Bank Verification Number
       security:
@@ -47,6 +80,145 @@ paths:
                   example: '+234000000000'
               required:
                 - id
+            examples:
+              example-1: {}
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+        description: ''
+  /v1/verifications/ng/driver_license:
+    post:
+      summary: Verify Nigeria Driver License
+      tags: []
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    description: The Driver License ID number
+                  first_name:
+                    type: string
+                    description: First name of the document holder
+                  last_name:
+                    type: string
+                    description: Last name of the document holder
+                  middle_name:
+                    type: string
+                    description: Middle name of the document holder
+                  date_of_birth:
+                    type: string
+                    description: Date of birth of the document holder
+                  phone_number:
+                    type: string
+                    description: Phone number of the document holder
+                  gender:
+                    type: string
+                    description: Gender of the document holder
+                  address:
+                    type: string
+                    description: Residential address of the document holder
+                  expiry_date:
+                    type: string
+                    description: Expiry date of the document
+                  is_first_name_match:
+                    type: boolean
+                    description: Whether the first name from the request matches the first name of the matched record
+                  is_last_name_match:
+                    type: boolean
+                    description: Whether the last name from the request matches the last name of the matched recordWthether
+                  is_middle_name_match:
+                    type: boolean
+                    description: Whether the middle name from the request matches the middle name of the matched record
+                  is_date_of_birth_match:
+                    type: boolean
+                    description: Whether the date of birth from the request matches the date of birth of the matched record
+                  is_phone_number_match:
+                    type: boolean
+                    description: Whether the phone number from the request matches the phone number of the matched record
+                  is_gender_match:
+                    type: boolean
+                    description: Whether the gender from the request matches the gender of the matched record
+                  is_address_match:
+                    type: boolean
+                    description: Whether the residential address from the request matches the residential address of the matched record
+                  is_expiry_date_match:
+                    type: boolean
+                    description: Whether the expiry date from the request matches the expiry date of the matched record
+              examples:
+                example-1: {}
+        '400':
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error-Model.v1.yaml
+        '404':
+          description: Not Found
+          content:
+            application/json:
+              schema:
+                $ref: ../models/Error-Model.v1.yaml
+      operationId: post-verifications-ng-driver_license
+      description: Verify A Nigeria Driver License
+      security:
+        - Access Token: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: string
+                  description: This represents the Driver License ID number
+                  example: AKW06968AA2
+                first_name:
+                  type: string
+                  example: David
+                  description: This represents the first name of the document holder
+                last_name:
+                  type: string
+                  example: Ife
+                  description: This represents the last name of the document holder
+                middle_name:
+                  type: string
+                  description: This represents the middle name of the document holder
+                  example: Anuyah
+                date_of_birth:
+                  type: string
+                  example: '1996-02-21'
+                  description: This represents the date of birth of the document holder in the format yyyy-MM-dd.
+                phone_number:
+                  type: string
+                  example: '+234000000000'
+                  description: This represents the phone number of the document holder
+                gender:
+                  type: string
+                  example: M
+                  enum:
+                    - M
+                    - F
+                  description: This represents the gender of the document holder
+                address:
+                  type: string
+                  description: This represents the residential address of the document holder
+                  example: '294 Herbert Macaulay Way, Yaba 101212, Lagos, Nigeria'
+                expiry_date:
+                  type: string
+                  example: '2022-04-12'
+                  description: This represents the expiry date of the document in the format yyyy-MM-dd
+              required:
+                - id
+                - first_name
+                - last_name
+                - date_of_birth
+    parameters: []
 components:
   schemas: {}
   securitySchemes:

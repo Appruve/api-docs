@@ -1,0 +1,6 @@
+title: MiddleNameMatch
+type: object
+properties:
+  is_middle_name_match:
+    type: boolean
+    description: Whether the middle name from the request matches the middle name of the matched record

@@ -1,0 +1,7 @@
+title: FirstNameMatch
+type: object
+description: ''
+properties:
+  is_first_name_match:
+    type: boolean
+    description: Whether the first name from the request matches the first name of the matched record

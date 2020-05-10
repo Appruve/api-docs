@@ -1,0 +1,6 @@
+title: Gender
+type: object
+properties:
+  gender:
+    type: string
+    description: Gender of the document holder

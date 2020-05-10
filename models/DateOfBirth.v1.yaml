@@ -1,0 +1,6 @@
+title: DateOfBirth
+type: object
+properties:
+  date_of_birth:
+    type: string
+    description: Date of birth of the document holder

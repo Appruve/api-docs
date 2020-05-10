@@ -1,0 +1,6 @@
+title: PhoneNumberMatch
+type: object
+properties:
+  is_phone_number_match:
+    type: boolean
+    description: Whether the phone number from the request matches the phone number of the matched record

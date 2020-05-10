@@ -1,0 +1,6 @@
+title: MiddleName
+type: object
+properties:
+  middle_name:
+    type: string
+    description: Middle name of the document holder

@@ -1,0 +1,6 @@
+title: LastNameMatch
+type: object
+properties:
+  is_last_name_match:
+    type: boolean
+    description: Whether the last name from the request matches the last name of the matched record
